@@ -1,0 +1,24 @@
+﻿<Properties StartupConfiguration="{EF98A6F9-7589-4800-8AC7-81648BB06FD7}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="XamlTest/Views/ItemDetailPage.xaml.cs">
+    <Files>
+      <File FileName="XamlTest/Views/ItemsPage.xaml" Line="15" Column="89" />
+      <File FileName="XamlTest/ViewModels/ItemsViewModel.cs" Line="25" Column="28" />
+      <File FileName="XamlTest/Views/AboutPage.xaml" Line="64" Column="84" />
+      <File FileName="XamlTest/ViewModels/AboutViewModel.cs" Line="1" Column="1" />
+      <File FileName="XamlTest/Views/ItemDetailPage.xaml" Line="3" Column="60" />
+      <File FileName="XamlTest/Views/ItemDetailPage.xaml.cs" Line="4" Column="1" />
+      <File FileName="XamlTest/App.xaml" Line="7" Column="32" />
+      <File FileName="XamlTest/MyStaticResources.cs" Line="4" Column="18" />
+      <File FileName="XamlTest/ViewModels/ItemDetailViewModel.cs" Line="7" Column="18" />
+      <File FileName="XamlTest/Models/Item.cs" Line="8" Column="27" />
+      <File FileName="XamlTest/Views/ItemsPage.xaml.cs" Line="27" Column="29" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.XamlTest.Droid PreferredExecutionTarget="Android.Nexus 5 (Lollipop)" />
+  <MultiItemStartupConfigurations />
+</Properties>

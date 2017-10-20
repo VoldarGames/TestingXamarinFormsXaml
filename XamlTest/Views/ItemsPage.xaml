@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="XamlTest.ItemsPage" 
+    Title="{Binding Title}" 
+    x:Name="BrowseItemsPage">
+	<ContentPage.ToolbarItems>
+		<ToolbarItem Text="Add" Clicked="AddItem_Clicked" />
+	</ContentPage.ToolbarItems>
+	<ContentPage.Content>
+		<StackLayout>
+			<ListView x:Name="ItemsListView" ItemsSource="{Binding Items}" VerticalOptions="FillAndExpand" 
+                HasUnevenRows="true" RefreshCommand="{Binding LoadItemsCommand}" 
+                IsPullToRefreshEnabled="true" IsRefreshing="{Binding IsBusy, Mode=OneWay}}" 
+                CachingStrategy="RecycleElement" ItemSelected="OnItemSelected">
+				<ListView.ItemTemplate>
+					<DataTemplate>
+						<ViewCell>
+							<StackLayout Padding="10">
+								<Label Text="{Binding Text}" LineBreakMode="NoWrap" 
+                                 FontSize="16" />
+								<Label Text="{Binding Description}" LineBreakMode="NoWrap" 
+                                 FontSize="13" >
+                                    <Label.Triggers>
+                                        <DataTrigger TargetType="Label"
+                                                     Binding="{Binding IsReadOnly}"
+                                                     Value="True">
+                                            <Setter Property="TextColor" Value="Green"/>
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="Label"
+                                                     Binding="{Binding IsReadOnly}"
+                                                     Value="False">
+                                            <Setter Property="TextColor" Value="Red"/>
+                                         </DataTrigger>
+                                    </Label.Triggers>
+                                </Label>
+                                <Label BindingContext="{Binding Path=BindingContext, Source={x:Reference BrowseItemsPage}}" Text="{Binding Title}"></Label>
+							</StackLayout>
+						</ViewCell>
+					</DataTemplate>
+				</ListView.ItemTemplate>
+			</ListView>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>
